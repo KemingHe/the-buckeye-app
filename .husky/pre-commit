@@ -7,5 +7,6 @@ pnpm lint
 pnpm build
 
 pnpm test
+pnpm scan:secret
 
 git add -A
