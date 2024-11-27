@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.0](https://github.com/KemingHe/learning-nextjs-firebase-admin/compare/v0.8.1...v0.9.0) (2024-11-27)
+
+### Features
+
+* **app/(firebase-auth-context) route group:** implemented auth mvp, removed all boilerplate code ([f3abf18](https://github.com/KemingHe/learning-nextjs-firebase-admin/commit/f3abf18dd02fcb71fd44ba05aeb27bb854b7ed86))
+
 ## [0.8.1](https://github.com/KemingHe/learning-nextjs-firebase-admin/compare/v0.8.0...v0.8.1) (2024-11-27)
 
 ## 0.8.0 (2024-11-27)
