@@ -4,7 +4,7 @@ import { type ReactNode, useEffect } from "react";
 
 import LoadingCard from "@components/LoadingCard";
 
-import { FB_CLIENT_DASHBOARD_ROUTE } from "@constants/routeConstants";
+import { USER_DASHBOARD_ROUTE } from "@constants/routeConstants";
 import {
   type AuthContextReturnProps,
   useAuthContext
@@ -36,8 +36,8 @@ export default function RedirectIfSignedInGuard({
       user
     ) {
       startLoading();
-      if (pathname !== FB_CLIENT_DASHBOARD_ROUTE) {
-        clientRouter.push(FB_CLIENT_DASHBOARD_ROUTE);
+      if (pathname !== USER_DASHBOARD_ROUTE) {
+        clientRouter.push(USER_DASHBOARD_ROUTE);
       }
     }
   }, [

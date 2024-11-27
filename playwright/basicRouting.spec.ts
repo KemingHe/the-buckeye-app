@@ -5,13 +5,18 @@ test.beforeEach(async ({ page }: { page: Page }): Promise<void> => {
 });
 
 test.describe("Basic routing", () => {
-  test("allows nav from Homepage to Debug page and back", async ({ page }) => {
-    // Click on the Debug page link button.
-    await page.click('text="Debug"');
-    await expect(page).toHaveURL("/debug");
+  test("allows signed in user to nav from Homepage to Auth SignIn page and back", async ({
+    page
+  }) => {
+    // Give each expect call a generous timeout.
+    const customTimeout = { timeout: 30000 };
 
-    // Click on the Home page link button.
+    // Click on the sign in/up link button.
+    await page.click('text="Ohio State Student Sign In/Up"');
+    await expect(page).toHaveURL("/auth/signin", customTimeout);
+
+    // Click on the home link button.
     await page.click('text="Home"');
-    await expect(page).toHaveURL("/");
+    await expect(page).toHaveURL("/", customTimeout);
   });
 });

@@ -2,12 +2,12 @@
 
 import type { ActionCodeSettings } from "firebase/auth";
 
-import { FB_CLIENT_VERIFY_ROUTE } from "@constants/routeConstants";
+import { AUTH_VERIFY_ROUTE } from "@constants/routeConstants";
 
-export const FB_CLIENT_LOCAL_STORAGE_KEY: string = "firebaseClientAuthEmail";
+export const FIREBASE_AUTH_LOCAL_STORAGE_KEY: string = "firebaseAuthEmail";
 
 // Firebase client auth (web app only) action code settings.
 export const actionCodeSettings: ActionCodeSettings = {
-  url: `${window.location.origin}${FB_CLIENT_VERIFY_ROUTE}`,
+  url: `${window.location.origin}${AUTH_VERIFY_ROUTE}`,
   handleCodeInApp: true
 };

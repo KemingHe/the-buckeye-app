@@ -4,7 +4,7 @@ import { type ReactNode, useEffect } from "react";
 
 import LoadingCard from "@components/LoadingCard";
 
-import { FB_CLIENT_SIGN_IN_ROUTE } from "@constants/routeConstants";
+import { AUTH_SIGNIN_ROUTE } from "@constants/routeConstants";
 import {
   type AuthContextReturnProps,
   useAuthContext
@@ -36,8 +36,8 @@ export default function RequiresSignedInGuard({
       !user
     ) {
       startLoading();
-      if (pathname !== FB_CLIENT_SIGN_IN_ROUTE) {
-        clientRouter.push(FB_CLIENT_SIGN_IN_ROUTE);
+      if (pathname !== AUTH_SIGNIN_ROUTE) {
+        clientRouter.push(AUTH_SIGNIN_ROUTE);
       }
     }
   }, [

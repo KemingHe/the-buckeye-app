@@ -1,7 +1,7 @@
 import { sendSignInLinkToEmail } from "firebase/auth";
 
 import {
-  FB_CLIENT_LOCAL_STORAGE_KEY,
+  FIREBASE_AUTH_LOCAL_STORAGE_KEY,
   actionCodeSettings
 } from "@lib/firebase/actionCodeSettings";
 import { fbAuth } from "@lib/firebase/firebaseClientApp";
@@ -18,7 +18,7 @@ export default async function signInClientAction(
     console.log(`Success: sign in link sent to "${email}".`);
 
     if (typeof window !== "undefined") {
-      window.localStorage.setItem(FB_CLIENT_LOCAL_STORAGE_KEY, email);
+      window.localStorage.setItem(FIREBASE_AUTH_LOCAL_STORAGE_KEY, email);
       console.log(
         `Success: "${email}" saved to local storage for later verification.`
       );

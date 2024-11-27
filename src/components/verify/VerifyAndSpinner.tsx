@@ -3,14 +3,14 @@ import LoadingCard from "@components/LoadingCard";
 import { isSignInWithEmailLink, signInWithEmailLink } from "firebase/auth";
 import { useEffect } from "react";
 
-import { FB_CLIENT_LOCAL_STORAGE_KEY } from "@lib/firebase/actionCodeSettings";
+import { FIREBASE_AUTH_LOCAL_STORAGE_KEY } from "@lib/firebase/actionCodeSettings";
 import { fbAuth } from "@lib/firebase/firebaseClientApp";
 
 import { type UseLoadingReturnProps, useLoading } from "@hooks/useLoading";
 
 export default function VerifyAndSpinner(): JSX.Element {
   const email: string | null = window.localStorage.getItem(
-    FB_CLIENT_LOCAL_STORAGE_KEY
+    FIREBASE_AUTH_LOCAL_STORAGE_KEY
   );
   const verifyEmailLink: string | null = window.location.href;
 
@@ -33,7 +33,7 @@ export default function VerifyAndSpinner(): JSX.Element {
       try {
         await signInWithEmailLink(fbAuth, email, verifyEmailLink);
         console.log(`Success: signed in with email link for "${email}".`);
-        window.localStorage.removeItem(FB_CLIENT_LOCAL_STORAGE_KEY);
+        window.localStorage.removeItem(FIREBASE_AUTH_LOCAL_STORAGE_KEY);
         console.log(`Success: removed "${email}" from local storage.`);
       } catch (error) {
         console.error(
