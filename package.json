@@ -3,8 +3,12 @@
   "type": "module",
   "name": "learning-nextjs-firebase-admin",
   "description": "Template repo demo-ing Firebase client and admin auth ntegration with NextJS 14+.",
-  "version": "0.7.0",
-  "keywords": ["nextjs", "firebase", "firebase-admin"],
+  "version": "0.8.0",
+  "keywords": [
+    "nextjs",
+    "firebase",
+    "firebase-admin"
+  ],
   "homepage": "https://firebaseadmin.learn.data-glow.com",
   "license": "MIT",
   "author": {

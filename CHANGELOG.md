@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0 (2024-11-27)
+
+### Features
+
+* **app/layout.tsx:** added favicon and google analytics ([184a004](https://github.com/KemingHe/learning-nextjs-firebase-admin/commit/184a0040eb780855830f31baa85264c79804ee0a))
+
 ## [0.7.0](https://github.com/KemingHe/learning-nextjs-firebase-admin/compare/v0.6.0...v0.7.0) (2024-11-22)
 
 ### Features
