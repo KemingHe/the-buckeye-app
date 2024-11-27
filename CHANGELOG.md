@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.8.1](https://github.com/KemingHe/learning-nextjs-firebase-admin/compare/v0.8.0...v0.8.1) (2024-11-27)
+
 ## 0.8.0 (2024-11-27)
 
 ### Features
