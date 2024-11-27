@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`routeConstants > matches the snapshot 1`] = `
+{
+  "DEBUG_ROUTE": "/debug",
+  "FB_ADMIN_DASHBOARD_ROUTE": "/firebase-admin-demo/dashboard",
+  "FB_ADMIN_HOME_ROUTE": "/firebase-admin-demo",
+  "FB_ADMIN_SIGN_IN_ROUTE": "/firebase-admin-demo/auth/signin",
+  "FB_CLIENT_ADMIN_DASHBOARD_ROUTE": "/firebase-client-demo/admin/dashboard",
+  "FB_CLIENT_BANNED_ROUTE": "/firebase-client-demo/banned",
+  "FB_CLIENT_DASHBOARD_ROUTE": "/firebase-client-demo/dashboard",
+  "FB_CLIENT_HOME_ROUTE": "/firebase-client-demo",
+  "FB_CLIENT_SIGN_IN_ROUTE": "/firebase-client-demo/auth/signin",
+  "FB_CLIENT_VERIFY_ROUTE": "/firebase-client-demo/auth/verify",
+  "HOME_ROUTE": "/",
+  "TECH_SUPPORT_ROUTE": "/tech-support",
+}
+`;

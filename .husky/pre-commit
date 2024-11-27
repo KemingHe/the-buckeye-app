@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pnpm install
+pnpm update
+
+pnpm lint
+pnpm build
+
+pnpm test
+
+git add -A
