@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "learning-nextjs-firebase-admin"
+    "default": "the-buckeye-app",
+    
+    "production": "the-buckeye-app",
+    "development": "the-buckeye-app-development"
   }
 }

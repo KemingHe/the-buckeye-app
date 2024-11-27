@@ -1,7 +1,13 @@
-import { defineConfig, devices } from "@playwright/test";
-import { config } from "dotenv-safe";
+import path from "node:path";
 
-config();
+import { defineConfig, devices } from "@playwright/test";
+import { config } from "dotenv";
+
+const devEnvFilePath: string = path.resolve(
+  process.cwd(),
+  ".env.development.local"
+);
+config({ path: devEnvFilePath });
 
 // See https://playwright.dev/docs/test-configuration.
 export default defineConfig({

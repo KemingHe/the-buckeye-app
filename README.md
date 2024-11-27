@@ -1,3 +1,4 @@
-# learning-nextjs-firebase-admin
+# The Buckeye App
 
-Template repo demo-ing Firebase client and admin auth ntegration with NextJS 14+.
+ Free open-source student organization management SaaS built for The Ohio State University community (not affiliated with Ohio State officials).
+ 
