@@ -6,9 +6,9 @@ import LoadingCard from "@components/LoadingCard";
 
 import { USER_DASHBOARD_ROUTE } from "@constants/routeConstants";
 import {
-  type AuthContextReturnProps,
-  useAuthContext
-} from "@contexts/AuthContext";
+  type UserContextReturnProps,
+  useUserContext
+} from "@contexts/UserContext";
 import { type UseLoadingReturnProps, useLoading } from "@hooks/useLoading";
 
 // -----------------------------------------------------------------------------
@@ -18,10 +18,10 @@ export default function RedirectIfSignedInGuard({
   const {
     clientRouter,
     pathname,
-    user,
-    authContextLoading,
-    authContextError
-  }: AuthContextReturnProps = useAuthContext();
+    userAuth,
+    userContextLoading,
+    userContextError
+  }: UserContextReturnProps = useUserContext();
 
   const { isLoading, startLoading, stopLoading }: UseLoadingReturnProps =
     useLoading();
@@ -29,11 +29,11 @@ export default function RedirectIfSignedInGuard({
   // ---------------------------------------------------------------------------
   useEffect(() => {
     if (
-      !authContextLoading &&
-      !authContextError &&
+      !userContextLoading &&
+      !userContextError &&
       !isLoading &&
-      // Check if user is signed in (user object is defined).
-      user
+      // Check if user is signed in (userAuth object is defined).
+      userAuth
     ) {
       startLoading();
       if (pathname !== USER_DASHBOARD_ROUTE) {
@@ -41,10 +41,10 @@ export default function RedirectIfSignedInGuard({
       }
     }
   }, [
-    authContextLoading,
-    authContextError,
+    userContextLoading,
+    userContextError,
     isLoading,
-    user,
+    userAuth,
     pathname
     // Include pathname to re-evaluate redirect logic on route change.
     // Exclude clientRouter to prevent unnecessary re-renders and infinite loops.
@@ -58,7 +58,7 @@ export default function RedirectIfSignedInGuard({
   }, []);
 
   // ---------------------------------------------------------------------------
-  if (authContextLoading || authContextError || isLoading || user) {
+  if (userContextLoading || userContextError || isLoading || userAuth) {
     return <LoadingCard message="Verifying..." />;
   }
 

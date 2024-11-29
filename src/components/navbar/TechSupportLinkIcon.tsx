@@ -3,7 +3,9 @@
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-import { TECH_SUPPORT_ROUTE } from "@constants/routeConstants";
+// import { TECH_SUPPORT_ROUTE } from "@constants/routeConstants";
+
+const TECH_SUPPORT_ROUTE: string = "/tech-support";
 
 export default function TechSupportLinkIcon(): JSX.Element {
   return (

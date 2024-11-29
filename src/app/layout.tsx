@@ -83,11 +83,8 @@ export default function RootLayout({
           href="/icons/apple-touch-icon.png"
         />
       </head>
-      <body className="flex flex-col min-h-screen">
-        <main className="flex flex-col flex-grow justify-center items-center">
-          {children}
-        </main>
-        <Footer />
+      <body className="flex flex-col min-h-screen justify-center items-center">
+        {children}
       </body>
       <GoogleAnalytics gaId={googleAnalyticsMeasurementId} />
     </html>

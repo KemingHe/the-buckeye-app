@@ -1,9 +1,9 @@
 "use client";
 
+import signInClientAction from "@components/signInCard/signInClientAction";
+
 import { NavLinkButton } from "@components/NavLinkButton";
 import ProtoSignInCard from "@components/signInCard/ProtoSignInCard";
-
-import signInClientAction from "@components/signInCard/signInClientAction";
 
 export default function SignInPage(): JSX.Element {
   return (
