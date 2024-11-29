@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.10.0](https://github.com/KemingHe/learning-nextjs-firebase-admin/compare/v0.9.0...v0.10.0) (2024-11-29)
+
+### Features
+
+* **app router:** re-grouped routes, made signout a page comp instead of button for better linkage ([221f20a](https://github.com/KemingHe/learning-nextjs-firebase-admin/commit/221f20ad8ea3be58bf49c780ccc553b270475854))
+
 ## [0.9.0](https://github.com/KemingHe/learning-nextjs-firebase-admin/compare/v0.8.1...v0.9.0) (2024-11-27)
 
 ### Features
